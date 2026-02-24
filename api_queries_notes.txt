@@ -1,0 +1,84 @@
+# loose_loot_locations.json
+query MyQuery {
+  maps {
+  	id
+    lootLoose {
+      items {
+        id
+        }
+      
+      position{
+        x
+        y
+        z
+        }
+      }
+    }
+  }
+ 
+# item_keys.json
+query MyQuery {
+  items(type: keys) {
+    id
+    name
+    normalizedName
+    shortName
+    description
+    minLevelForFlea
+    weight
+    properties {
+      ... on ItemPropertiesKey {
+        uses
+      }
+    }
+    wikiLink
+    iconLink
+    backgroundColor
+  }
+}
+
+# item_ammo.json
+query MyQuery {
+  items(type: ammo) {
+    id
+    name
+    normalizedName
+    shortName
+    description
+    minLevelForFlea
+    weight
+    properties {
+      ... on ItemPropertiesAmmo {
+        caliber
+        stackMaxSize
+        accuracyModifier
+        ammoType
+        armorDamage
+        bulletMassGrams
+        bulletDiameterMilimeters
+        ballisticCoeficient
+        damage
+        durabilityBurnFactor
+        failureToFeedChance
+        fragmentationChance
+        heatFactor
+        heavyBleedModifier
+        initialSpeed
+        lightBleedModifier
+        misfireChance
+        penetrationChance
+        penetrationPower
+        penetrationPowerDeviation
+        projectileCount
+        recoilModifier
+        ricochetChance
+        tracer
+        staminaBurnPerDamage
+        tracerColor
+      }
+    }
+    iconLink
+    wikiLink
+    backgroundColor
+  }
+}
