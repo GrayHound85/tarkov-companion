@@ -82,3 +82,18 @@ query MyQuery {
     backgroundColor
   }
 }
+
+# items.json
+query Items {
+  items {
+    id
+    name
+    shortName
+    wikiLink
+    types
+    image8xLink
+    inspectImageLink
+    height
+    width
+  }
+}
